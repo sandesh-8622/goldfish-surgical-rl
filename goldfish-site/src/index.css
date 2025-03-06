@@ -1,0 +1,28 @@
+:root {
+  --bg: #0a0a0a;
+  --fg: #e6e6e6;
+  --muted: #888;
+  --accent: #5acdcd;
+  --line: #1a1a1a;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
