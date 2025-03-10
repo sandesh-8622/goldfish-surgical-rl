@@ -1,0 +1,74 @@
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 50;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.brand {
+  padding-bottom: var(--s2);
+  border-bottom: 1px solid rgba(247,244,240,0.08);
+  margin-bottom: var(--s2);
+}
+
+.brandName {
+  display: block;
+  font-size: 14px;
+  color: rgba(247,244,240,0.85);
+  letter-spacing: 0.04em;
+}
+
+.brandSub {
+  display: block;
+  font-size: 11px;
+  color: rgba(247,244,240,0.25);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+}
+
+.footer {
+  font-size: 11px;
+  color: rgba(247,244,240,0.2);
+  letter-spacing: 0.03em;
+  padding-top: var(--s2);
+  border-top: 1px solid rgba(247,244,240,0.06);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.githubLink {
+  display: flex;
+  align-items: center;
+  color: rgba(247,244,240,0.25);
+  transition: color 150ms ease;
+}
+
+.githubLink:hover {
+  color: rgba(247,244,240,0.85);
+}
+
+.brandSub {
+  display: block;
+  font-size: 11px;
+  color: rgba(247,244,240,0.35);
+  letter-spacing: 0.04em;
+  margin-top: 3px;
+  font-weight: 300;
+}
