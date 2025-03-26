@@ -1,0 +1,106 @@
+.page { max-width: 720px; }
+
+.header {
+  padding-bottom: var(--s3);
+  border-bottom: 1px solid var(--border);
+}
+
+.kicker {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+  margin-bottom: var(--s2);
+}
+
+.header p,
+.section p {
+  max-width: 68ch;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: var(--s2);
+}
+
+.section {
+  padding: var(--s3) 0;
+  border-bottom: 1px solid var(--border-2);
+}
+
+.section h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: var(--s2);
+}
+
+.code {
+  border: 1px solid var(--border);
+  background: rgba(17,17,17,0.02);
+  padding: var(--s2);
+  margin-bottom: var(--s2);
+  white-space: pre-wrap;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s2);
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  padding: var(--s2);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s2);
+  margin-bottom: var(--s2);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.cardTop strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.card h3 {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: var(--s2);
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.card code {
+  display: block;
+  border: 1px solid var(--border-2);
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  background: rgba(17,17,17,0.02);
+}
+
+.list {
+  padding-left: 18px;
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 68ch;
+  font-size: 14px;
+}
