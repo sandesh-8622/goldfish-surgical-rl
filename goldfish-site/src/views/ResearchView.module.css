@@ -1,0 +1,77 @@
+.page { max-width: 640px; }
+
+.title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: var(--s3);
+}
+
+.tree { margin: var(--s3) 0; }
+
+.treeRoot {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.paperMeta {
+  display: flex;
+  gap: var(--s2);
+  margin-bottom: 4px;
+}
+
+.paperYear,
+.paperVenue {
+  font-size: 11px;
+  color: var(--muted-2);
+  letter-spacing: 0.04em;
+}
+
+.paperTitle {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.paperAuthors {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-2);
+}
+
+.body p + p { margin-top: 12px; }
+
+.mediaGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  margin-top: 12px;
+}
+
+.figure { margin: 0; }
+
+.media {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.caption {
+  font-size: 12px;
+  color: var(--muted-2);
+  margin-top: 5px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
