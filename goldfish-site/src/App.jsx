@@ -4,6 +4,8 @@ import BottomNav from './components/layout/BottomNav'
 import OverviewView from './views/OverviewView'
 import ProblemView from './views/ProblemView'
 import RewardView from './views/RewardView'
+import SystemView from './views/SystemView'
+import ResearchView from './views/ResearchView'
 import './App.css'
 
 function App() {
@@ -16,8 +18,8 @@ function App() {
             <Route path="/" element={<OverviewView />} />
             <Route path="/problem" element={<ProblemView />} />
             <Route path="/reward" element={<RewardView />} />
-            <Route path="/system" element={<div>system</div>} />
-            <Route path="/research" element={<div>research</div>} />
+            <Route path="/system" element={<SystemView />} />
+            <Route path="/research" element={<ResearchView />} />
             <Route path="/docs" element={<div>docs</div>} />
           </Routes>
         </main>
