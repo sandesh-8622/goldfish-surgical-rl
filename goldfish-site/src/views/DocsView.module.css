@@ -1,0 +1,153 @@
+.page { max-width: 720px; }
+
+.header {
+  padding-bottom: var(--s3);
+  border-bottom: 1px solid var(--border);
+}
+
+.kicker {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+  margin-bottom: var(--s2);
+}
+
+.lede,
+.section p {
+  max-width: 68ch;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.notice {
+  border: 1px solid var(--border);
+  padding: var(--s2);
+  margin-top: var(--s3);
+  background: rgba(17,17,17,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.notice strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.section {
+  padding: var(--s3) 0;
+  border-bottom: 1px solid var(--border-2);
+}
+
+.section h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: var(--s2);
+}
+
+.steps,
+.moduleGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s2);
+  margin-top: var(--s2);
+}
+
+.steps div,
+.module {
+  border: 1px solid var(--border);
+  padding: var(--s2);
+  background: var(--panel-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.steps span {
+  display: block;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.moduleTop {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s2);
+  align-items: baseline;
+  margin-bottom: var(--s2);
+}
+
+.moduleTop h3 {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.moduleTop span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.module p {
+  font-size: 13px;
+  line-height: 1.75;
+  margin-bottom: var(--s2);
+}
+
+.module code,
+.module pre {
+  display: block;
+  border: 1px solid var(--border-2);
+  padding: 8px 10px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin-bottom: var(--s2);
+  background: rgba(17,17,17,0.02);
+}
+
+.module ul,
+.successList {
+  padding-left: 18px;
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 13px;
+}
+
+.table {
+  border: 1px solid var(--border);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  padding: var(--s2);
+  border-bottom: 1px solid var(--border-2);
+}
+
+.row:last-child { border-bottom: 0; }
+
+.row span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.row strong {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.row p {
+  font-size: 13px;
+  line-height: 1.75;
+}
