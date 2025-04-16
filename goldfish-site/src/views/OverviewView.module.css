@@ -79,3 +79,8 @@
   transition: background 100ms ease;
 }
 .joinLink:hover { background: rgba(17,17,17,0.06); opacity: 1; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
