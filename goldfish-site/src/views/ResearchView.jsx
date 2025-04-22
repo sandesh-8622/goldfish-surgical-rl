@@ -1,4 +1,5 @@
 import LogFile from '../components/log/LogFile.jsx';
+// citations and related work for goldfish
 import styles from './ResearchView.module.css';
 
 const LOGS = [
