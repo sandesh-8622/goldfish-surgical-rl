@@ -49,3 +49,9 @@ pre.body { white-space: pre-wrap; }
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 28px 0;
+}
