@@ -24,3 +24,28 @@ class LayeredTissueSimulator:
         self.rng = np.random.default_rng(seed)
         self.strain = 0.0
         self.force = 0.0
+
+
+
+class NeedleInsertionEnv:
+    """gym-compatible env for needle insertion training."""
+
+    def __init__(self):
+        self.tissue = LayeredTissueSimulator()
+        self.step_count = 0
+
+    def reset(self):
+        self.tissue = LayeredTissueSimulator()
+        self.step_count = 0
+        return self._get_obs()
+
+    def step(self, action):
+        self.step_count += 1
+        obs = self._get_obs()
+        reward = 0.0
+        done = False
+        info = {}
+        return obs, reward, done, info
+
+    def _get_obs(self):
+        return np.zeros(15, dtype=np.float32)
