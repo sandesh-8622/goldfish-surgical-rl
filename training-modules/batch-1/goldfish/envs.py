@@ -28,7 +28,19 @@ class LayeredTissueSimulator:
 
 
 class NeedleInsertionEnv:
-    """gym-compatible env for needle insertion training."""
+    """gym-compatible env for needle insertion training.
+
+    observation (15-dim):
+      0-2   needle tip position xyz
+      3-5   target position delta xyz
+      6     tissue type id (0/1/2)
+      7     current strain
+      8     current insertion force
+      9-11  vascular proximity vector
+      12    accumulated trauma score
+      13    inflammation estimate
+      14    timestep ratio
+    """
 
     def __init__(self):
         self.tissue = LayeredTissueSimulator()
