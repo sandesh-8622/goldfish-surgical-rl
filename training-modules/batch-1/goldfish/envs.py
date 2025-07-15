@@ -19,6 +19,17 @@ TISSUE_LAYERS = {
 class LayeredTissueSimulator:
     """layered soft tissue with kelvin-voigt viscoelastic response."""
 
+    def total_thickness_mm(self):
+        return sum(TISSUE_LAYERS[l]["thickness_mm"] for l in self.layers)
+
+    def layer_at_depth(self, depth_mm):
+        cumulative = 0
+        for layer in self.layers:
+            cumulative += TISSUE_LAYERS[layer]["thickness_mm"]
+            if depth_mm <= cumulative:
+                return layer
+        return self.layers[-1]
+
     def __init__(self, layers=None, seed=0):
         self.layers = layers or list(TISSUE_LAYERS.keys())
         self.rng = np.random.default_rng(seed)
