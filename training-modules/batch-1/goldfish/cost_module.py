@@ -39,3 +39,24 @@ class VascularProximityCost:
         # quadratic penalty as distance shrinks below threshold
         deficit = self.min_distance_mm - distance_mm
         return self.weight * (deficit / self.min_distance_mm) ** 2
+
+
+
+class InflammationModel:
+    """cumulative trauma to inflammation response estimate.
+
+    based on DiMaio and Salcudean 2003. trauma accumulates; inflammation
+    is a saturating function of total trauma.
+    """
+
+    def __init__(self, saturation=0.6):
+        self.saturation = saturation
+        self.cumulative_trauma = 0.0
+
+    def update(self, trauma_step):
+        self.cumulative_trauma += max(0.0, trauma_step)
+        # saturating exponential
+        return self.saturation * (1.0 - np.exp(-self.cumulative_trauma / 5.0))
+
+    def reset(self):
+        self.cumulative_trauma = 0.0
