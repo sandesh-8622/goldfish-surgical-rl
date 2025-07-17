@@ -23,3 +23,19 @@ class TissueTraumaCost:
     def __init__(self, strain_weight=1.0, force_weight=0.5):
         self.strain_weight = strain_weight
         self.force_weight = force_weight
+
+
+
+class VascularProximityCost:
+    """penalty for needle approaching blood vessels too closely."""
+
+    def __init__(self, min_distance_mm=3.0, weight=2.0):
+        self.min_distance_mm = min_distance_mm
+        self.weight = weight
+
+    def compute(self, distance_mm):
+        if distance_mm >= self.min_distance_mm:
+            return 0.0
+        # quadratic penalty as distance shrinks below threshold
+        deficit = self.min_distance_mm - distance_mm
+        return self.weight * (deficit / self.min_distance_mm) ** 2
