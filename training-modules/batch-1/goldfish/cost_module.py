@@ -24,6 +24,15 @@ class TissueTraumaCost:
         self.strain_weight = strain_weight
         self.force_weight = force_weight
 
+    def compute(self, strain, force_N):
+        strain_pen = 0.0
+        if strain > THRESHOLDS["max_strain"]:
+            strain_pen = self.strain_weight * (strain / THRESHOLDS["max_strain"]) ** 2
+        force_pen = 0.0
+        if force_N > THRESHOLDS["max_force_N"]:
+            force_pen = self.force_weight * (force_N / THRESHOLDS["max_force_N"]) ** 2
+        return strain_pen + force_pen
+
 
 
 class VascularProximityCost:
