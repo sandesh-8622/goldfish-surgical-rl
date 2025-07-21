@@ -69,3 +69,28 @@ class InflammationModel:
 
     def reset(self):
         self.cumulative_trauma = 0.0
+
+
+
+class BiologicalCostModule:
+    """combined cost from trauma, vascular proximity, and inflammation.
+
+    this is the thing the env actually calls each step. it wraps the
+    individual cost components and returns a single scalar plus a dict
+    of components for logging.
+    """
+
+    def __init__(self):
+        self.trauma   = TissueTraumaCost()
+        self.vascular = VascularProximityCost()
+        self.inflam   = InflammationModel()
+
+    def reset(self):
+        self.inflam.reset()
+
+    def compute(self, strain, force_N, vascular_distance_mm):
+        t = self.trauma.compute(strain, force_N)
+        v = self.vascular.compute(vascular_distance_mm)
+        i = self.inflam.update(t)
+        total = t + v + (i if i > THRESHOLDS["max_inflammation"] else 0.0)
+        return total, {"trauma": t, "vascular": v, "inflammation": i}
