@@ -35,3 +35,31 @@ class GoldfishPPOTrainer:
         )
         self.model.learn(total_timesteps=self.total_timesteps)
         return self.model
+
+
+    def save(self, path):
+        if self.model is None:
+            raise RuntimeError("no model to save, call train() first")
+        os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+        self.model.save(path)
+
+    def load(self, path):
+        from stable_baselines3 import PPO
+        self.model = PPO.load(path)
+        return self.model
+
+    def evaluate(self, n_episodes=10):
+        if self.model is None:
+            raise RuntimeError("no model loaded")
+        rewards = []
+        for _ in range(n_episodes):
+            obs, _ = self.env.reset()
+            done = False
+            total = 0.0
+            while not done:
+                action, _ = self.model.predict(obs, deterministic=True)
+                obs, r, terminated, truncated, _ = self.env.step(action)
+                total += r
+                done = terminated or truncated
+            rewards.append(total)
+        return float(np.mean(rewards)), float(np.std(rewards))
