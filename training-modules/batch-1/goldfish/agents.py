@@ -63,3 +63,20 @@ class GoldfishPPOTrainer:
                 done = terminated or truncated
             rewards.append(total)
         return float(np.mean(rewards)), float(np.std(rewards))
+
+
+
+class RLAgent:
+    """tiny random-policy fallback for when sb3 is not installed.
+
+    not meant to be useful for actually solving the env. mostly here
+    so smoke tests can run on systems without torch.
+    """
+
+    def __init__(self, action_dim=6):
+        self.action_dim = action_dim
+        self.rng = np.random.default_rng(0)
+
+    def predict(self, obs, deterministic=False):
+        a = self.rng.uniform(-1.0, 1.0, size=self.action_dim).astype(np.float32)
+        return a, None
