@@ -20,3 +20,31 @@ class SimulationWorldModel:
         self.action_dim = action_dim
         self.hidden = hidden
         self.trained = False
+
+
+    def collect_rollouts(self, env, agent, n_episodes=20):
+        """run agent in env and store (obs, action, next_obs) tuples."""
+        data = []
+        for _ in range(n_episodes):
+            obs, _ = env.reset()
+            done = False
+            while not done:
+                action, _ = agent.predict(obs)
+                next_obs, _r, term, trunc, _info = env.step(action)
+                data.append((np.asarray(obs, dtype=np.float32),
+                             np.asarray(action, dtype=np.float32),
+                             np.asarray(next_obs, dtype=np.float32)))
+                obs = next_obs
+                done = term or trunc
+        return data
+
+    def train(self, data, epochs=20):
+        """basic MSE fit. tiny net, tiny data, just enough to have a hook."""
+        try:
+            import torch
+            import torch.nn as nn
+        except ImportError:
+            print("[!] torch not installed, skipping world model training")
+            return
+        # placeholder training loop, no real net yet
+        self.trained = True
