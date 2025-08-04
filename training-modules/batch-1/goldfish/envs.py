@@ -164,6 +164,7 @@ class NeedleInsertionEnv(gym.Env):
         self.prev_distance      = 0.0
         self.episode_metrics    = []
 
+    # reset before each rollout, deterministic if seed is fixed
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
         rng = np.random.default_rng(seed)
