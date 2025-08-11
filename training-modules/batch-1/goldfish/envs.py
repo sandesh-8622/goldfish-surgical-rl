@@ -193,6 +193,7 @@ class NeedleInsertionEnv(gym.Env):
 
         return self._get_obs(), {}
 
+    # action space: 6-dim continuous, normalized to [-1, 1]
     def step(self, action):
         action = np.clip(action, -1., 1.).astype(np.float32)
         sz = np.array(self.config.tissue_size, dtype=np.float32)
