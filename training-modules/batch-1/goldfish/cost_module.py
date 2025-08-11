@@ -234,12 +234,3 @@ def compute_needle_insertion_score(
         'time_score':    time_score,
         'total_score':   total,
     }
-
-
-
-# tuning notes
-# strain_weight and force_weight roughly balance once weight 0.5 on force.
-# vascular weight should dominate, vessel hits are catastrophic in real
-# surgery so we want the policy to prioritize avoiding them above all else.
-# inflammation kicks in late and is more of an episode-end shape signal
-# than a per-step nudge.
