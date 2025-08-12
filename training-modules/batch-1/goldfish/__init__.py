@@ -57,3 +57,15 @@ __all__ = [
     'EvidenceLogger',
     'FDASimulationLog',
 ]
+
+
+# register the env with gymnasium so gym.make("Goldfish-v0") works
+try:
+    from gymnasium.envs.registration import register
+    register(
+        id="Goldfish-NeedleInsertion-v0",
+        entry_point="goldfish.envs:NeedleInsertionEnv",
+        max_episode_steps=500,
+    )
+except ImportError:
+    pass
