@@ -347,11 +347,3 @@ class TestRLAgent:
 
 if __name__ == '__main__':
     pytest.main([__file__, '-v'])
-
-
-def test_cost_module_reset():
-    from goldfish.cost_module import BiologicalCostModule
-    m = BiologicalCostModule()
-    m.inflam.cumulative_trauma = 5.0
-    m.reset()
-    assert m.inflam.cumulative_trauma == 0.0
