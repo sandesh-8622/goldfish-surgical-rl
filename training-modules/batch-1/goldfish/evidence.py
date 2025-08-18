@@ -323,6 +323,7 @@ class FDASimulationLog:
         return data
 
 
+# event types: run_start, step, episode_end, run_end
 class EvidenceLogger:
     """
     High-level interface for logging simulation evidence.
