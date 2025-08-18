@@ -1,3 +1,6 @@
-# goldfish batch 1
+# goldfish - surgical robot training environment
 
-surgical robot training environment, batch 1.
+a reinforcement learning training environment for surgical needle insertion
+with biologically informed reward functions and soft tissue mechanics.
+
+work in progress, batch 1.
