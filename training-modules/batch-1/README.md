@@ -25,3 +25,18 @@ avoiding blood vessels.
 | Max insertion force | 4.0 N | Okamura et al. 2004 |
 | Min vascular distance | 3.0 mm | Abolhassani et al. 2007 |
 | Max inflammatory response | 0.60 | DiMaio and Salcudean 2003 |
+
+
+## honest scope
+
+### what works today
+- runnable RL training loop with real PPO
+- kelvin-voigt tissue mechanics
+- biologically informed reward with cited thresholds
+- evidence logging with structured JSON output
+- passing test suite
+
+### what is future work
+- SOFA / PhysiCell / SimVascular integration (multi-month project)
+- JEPA world model training (needs real tissue data)
+- FDA CMAS compliance (needs V&V studies)
