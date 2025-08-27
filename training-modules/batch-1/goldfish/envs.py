@@ -1,3 +1,4 @@
+# action clipping handled inside step()
 """
 Goldfish Gym Environment - Needle Insertion
 
