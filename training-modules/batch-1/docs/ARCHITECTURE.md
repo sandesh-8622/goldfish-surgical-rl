@@ -184,3 +184,13 @@ These are the correct next milestones, in that order.
 
 6. Schmidgall S. et al. (2023). "SurgicalGym: A high-performance GPU-based
    platform for surgical robot learning." ICRA 2024.
+
+
+## limits
+
+this is a simulation environment. it is not a high fidelity surgical
+simulator. tissue parameters are reasonable but not patient specific.
+vessel placement is randomized within reasonable anatomy, not derived
+from medical imaging. the policy that comes out of this trains on the
+simulation and does not transfer to real surgery without significant
+sim-to-real work.
