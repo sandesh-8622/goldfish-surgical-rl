@@ -117,3 +117,5 @@ goldfish/
 - Abolhassani N. et al. (2007) - needle insertion survey
 - LeCun Y. (2022) - JEPA world model architecture (aspirational)
 - Schmidgall S. (2023) - SurgicalGym GPU-accelerated simulation
+
+feedback welcome.
