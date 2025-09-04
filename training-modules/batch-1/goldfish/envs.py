@@ -1,4 +1,3 @@
-# action clipping handled inside step()
 """
 Goldfish Gym Environment - Needle Insertion
 
@@ -165,7 +164,6 @@ class NeedleInsertionEnv(gym.Env):
         self.prev_distance      = 0.0
         self.episode_metrics    = []
 
-    # reset before each rollout, deterministic if seed is fixed
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
         rng = np.random.default_rng(seed)
@@ -194,7 +192,6 @@ class NeedleInsertionEnv(gym.Env):
 
         return self._get_obs(), {}
 
-    # action space: 6-dim continuous, normalized to [-1, 1]
     def step(self, action):
         action = np.clip(action, -1., 1.).astype(np.float32)
         sz = np.array(self.config.tissue_size, dtype=np.float32)
