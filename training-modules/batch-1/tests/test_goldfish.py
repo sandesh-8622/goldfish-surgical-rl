@@ -347,3 +347,11 @@ class TestRLAgent:
 
 if __name__ == '__main__':
     pytest.main([__file__, '-v'])
+
+
+def test_evidence_writes_file(tmp_path):
+    from goldfish.evidence import EvidenceLogger
+    logger = EvidenceLogger(output_dir=str(tmp_path), run_name="unit")
+    logger.log_event("run_start", config={"timesteps": 100})
+    logger.flush()
+    assert (tmp_path / "unit_evidence.json").exists()
