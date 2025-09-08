@@ -10,7 +10,6 @@ Run:
     python demos/needle_insertion_v1.py --quick          # 30k steps, ~2 min
 """
 
-# default 300k timesteps takes ~20 min on cpu, use --quick for smoke test
 import argparse
 import os
 import json
