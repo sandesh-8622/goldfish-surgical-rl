@@ -1,3 +1,17 @@
-# goldfish batch 2
+# goldfish - surgical robot training environment
 
-continuation of batch-1, kelvin-voigt package.
+a reinforcement learning training environment for surgical needle insertion
+with biologically informed reward functions and soft tissue mechanics.
+
+## what this is
+
+goldfish is a simulation environment where a robot agent learns to insert a
+needle into layered soft tissue accurately while minimising tissue trauma and
+avoiding blood vessels.
+
+- physics model: kelvin-voigt viscoelastic layers (Okamura et al. 2004)
+- RL algorithm: stable-baselines3 PPO
+- observation: 15-dim compact state vector
+
+batch 2 is a working continuation of batch 1, same target task, same scope,
+keep outputs separated so you can compare runs.
