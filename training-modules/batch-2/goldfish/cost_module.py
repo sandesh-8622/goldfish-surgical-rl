@@ -234,3 +234,7 @@ def compute_needle_insertion_score(
         'time_score':    time_score,
         'total_score':   total,
     }
+
+
+# batch 2 retunes are intentionally minor, the goal is consistent comparison
+# with batch 1, not a different reward function.
