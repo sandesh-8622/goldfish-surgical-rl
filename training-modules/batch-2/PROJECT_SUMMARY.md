@@ -119,3 +119,7 @@ Project status: runnable research module.
 
 Use Batch 2 as a separate trained-module continuation from Batch 1. Do not mix
 checkpoints, logs, or evaluation outputs between batches.
+
+## reproducibility
+
+seed all random sources via the rng arg on env reset. evaluation runs should be done with deterministic=True on the policy to remove sampling noise.
