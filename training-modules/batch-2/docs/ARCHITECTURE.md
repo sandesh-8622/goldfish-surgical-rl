@@ -184,3 +184,11 @@ These are the correct next milestones, in that order.
 
 6. Schmidgall S. et al. (2023). "SurgicalGym: A high-performance GPU-based
    platform for surgical robot learning." ICRA 2024.
+
+
+## batch 2 outputs
+
+batch 2 evaluation runs write to `./results/batch2/` by default. keep
+batch 1 and batch 2 outputs in separate directories so you can compare
+success rate, mean trauma, mean reward, and vascular safety metrics
+directly between the two runs.
