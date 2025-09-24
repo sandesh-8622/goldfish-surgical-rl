@@ -1,3 +1,4 @@
+# batch 2 quick demo, takes about 30s on cpu
 """
 Goldfish - Quick Demo  (~2 minutes, 30k timesteps)
 
