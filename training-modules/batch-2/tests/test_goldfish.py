@@ -347,3 +347,12 @@ class TestRLAgent:
 
 if __name__ == '__main__':
     pytest.main([__file__, '-v'])
+
+
+def test_inflammation_saturates():
+    from goldfish.cost_module import InflammationModel
+    m = InflammationModel(saturation=0.6)
+    for _ in range(50):
+        m.update(2.0)
+    # should approach saturation but never exceed it
+    assert m.update(0.0) <= 0.6
