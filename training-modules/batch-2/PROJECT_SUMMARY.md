@@ -123,3 +123,7 @@ checkpoints, logs, or evaluation outputs between batches.
 ## reproducibility
 
 seed all random sources via the rng arg on env reset. evaluation runs should be done with deterministic=True on the policy to remove sampling noise.
+
+## changelog
+
+- 2025-09: batch 2 v1, continuation of batch 1, same scope.
