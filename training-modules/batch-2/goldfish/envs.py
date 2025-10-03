@@ -244,6 +244,7 @@ class NeedleInsertionEnv(gym.Env):
         self.current_step += 1
         return self._get_obs(), float(reward), terminated, False, self._get_info()
 
+    # step cap is 500 by default, see __init__.py registration
     def _get_obs(self):
         sz  = np.array(self.config.tissue_size, dtype=np.float32)
         pos = self.needle_position
