@@ -457,3 +457,9 @@ if __name__ == '__main__':
     print(f"Mean tissue trauma: {data['statistical_summary']['tissue_trauma']['mean']:.4f}")
     
     print("Evidence logger test passed!")
+
+
+# example consumer
+# logger = EvidenceLogger(output_dir='./results/batch2', run_name='trial-001')
+# logger.log_event('run_start', config={'timesteps': 300000})
+# logger.flush()
