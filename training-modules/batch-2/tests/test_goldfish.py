@@ -356,3 +356,11 @@ def test_inflammation_saturates():
         m.update(2.0)
     # should approach saturation but never exceed it
     assert m.update(0.0) <= 0.6
+
+
+def test_vascular_distance_clean():
+    from goldfish.cost_module import VascularProximityCost
+    cost = VascularProximityCost(min_distance_mm=3.0)
+    # at or beyond the safe margin, cost should be zero
+    assert cost.compute(3.0) == 0.0
+    assert cost.compute(5.0) == 0.0
