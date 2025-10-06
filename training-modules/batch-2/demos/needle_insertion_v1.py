@@ -10,6 +10,7 @@ Run:
     python demos/needle_insertion_v1.py --quick          # 30k steps, ~2 min
 """
 
+# batch 2 demo, same interface as batch 1
 import argparse
 import os
 import json
