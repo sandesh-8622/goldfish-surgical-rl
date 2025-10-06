@@ -192,3 +192,12 @@ batch 2 evaluation runs write to `./results/batch2/` by default. keep
 batch 1 and batch 2 outputs in separate directories so you can compare
 success rate, mean trauma, mean reward, and vascular safety metrics
 directly between the two runs.
+
+
+## quick links
+
+- goldfish/envs.py - environment and tissue mechanics
+- goldfish/cost_module.py - biological cost functions
+- goldfish/agents.py - PPO trainer and lightweight agent
+- goldfish/evidence.py - structured JSON logging
+- goldfish/world_model.py - simulation world model scaffold
