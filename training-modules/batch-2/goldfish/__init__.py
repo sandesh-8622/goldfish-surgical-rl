@@ -1,18 +1,4 @@
-"""
-Goldfish: Surgical Robot Training Environment
-
-A reinforcement learning environment for needle insertion into layered
-soft tissue with biologically-informed reward functions.
-
-Quick start:
-    from goldfish.envs import NeedleInsertionEnv
-    from goldfish.agents import GoldfishPPOTrainer
-
-    env     = NeedleInsertionEnv()
-    trainer = GoldfishPPOTrainer(env)
-    trainer.train(total_timesteps=300_000)
-    results = trainer.evaluate(n_episodes=100)
-"""
+"""goldfish (batch 2) - surgical needle insertion training environment."""
 
 __version__ = '0.2.0'
 
