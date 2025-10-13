@@ -127,3 +127,8 @@ seed all random sources via the rng arg on env reset. evaluation runs should be 
 ## changelog
 
 - 2025-09: batch 2 v1, continuation of batch 1, same scope.
+
+## handoff
+
+this batch is ready to compare against batch 1 outputs side by side.
+keep checkpoint files and evidence logs separate, do not mix them.
