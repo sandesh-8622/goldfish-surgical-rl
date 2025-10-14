@@ -121,7 +121,7 @@ goldfish/
 
 ---
 
-status: batch 2 v1, runnable research module.
+status: batch 2 v1, delivered v1 on 2025-10-14, runnable research module.
 
 ## acknowledgments
 
