@@ -132,3 +132,7 @@ seed all random sources via the rng arg on env reset. evaluation runs should be 
 
 this batch is ready to compare against batch 1 outputs side by side.
 keep checkpoint files and evidence logs separate, do not mix them.
+
+## license
+
+MIT, see LICENSE in repository root.
