@@ -122,3 +122,8 @@ goldfish/
 ---
 
 status: batch 2 v1, runnable research module.
+
+## acknowledgments
+
+thanks to the SurgicalGym team for the simulation framework reference,
+and to the Okamura and Fung papers for the foundational biomechanics work.
