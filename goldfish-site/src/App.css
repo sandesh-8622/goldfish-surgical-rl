@@ -1,9 +1,33 @@
-.app {
+.app-page {
   display: flex;
   min-height: 100vh;
 }
 
-.content {
+.app-sidebar {
+  position: fixed;
+  left: 0; top: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 50;
+}
+
+.app-content {
+  margin-left: 200px;
   flex: 1;
-  padding: 3rem 5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-panel {
+  background: var(--panel);
+  padding: clamp(20px, 3vw, 44px);
+  min-height: 100vh;
+  border-top: 2px solid rgba(247,244,240,0.15);
+}
+
+@media (max-width: 700px) {
+  .app-sidebar  { display: none; }
+  .app-content  { margin-left: 0; }
+  .app-panel    { padding-bottom: 80px; }
 }
